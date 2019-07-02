@@ -7,5 +7,5 @@ COPY --from=0 /app/springboot-simple-docker /app
 RUN mvn install 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=1 /app/target/springboot-simple-docker-0.0.1.jar /app 
-CMD ["java -jar springboot-simple-docker-0.0.1.jar"] 
+COPY --from=1 /app/target/springboot-simple-docker-1.0-SNAPSHOT.jar /app 
+CMD ["java -jar springboot-simple-docker-1.0-SNAPSHOT.jar"] 
